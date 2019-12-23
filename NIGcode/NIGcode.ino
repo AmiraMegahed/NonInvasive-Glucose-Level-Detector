@@ -5,7 +5,7 @@ int glucoselevel = 0;
 int arr[50];
 int counterelements = 0;
 int correctedglucoselevel = 0;
-LiquidCrystal lcd(12,11,5,4,3,7);
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
 
 void setup() 
 {
@@ -43,9 +43,9 @@ void loop()
        Serial.println(" mg/dl");
        lcd.setCursor(0,0);
        lcd.print("Glucose level = ");
-       lcd.setCursor(1,5);
+       lcd.setCursor(5,1);
        lcd.print(correctedglucoselevel);
-       lcd.setCursor(1,10);
+       lcd.setCursor(10,1);
        lcd.print(" mg/dl");
        counterelements = 0;
      }
@@ -55,7 +55,7 @@ void loop()
    {
     lcd.setCursor(0,0);
     lcd.print("please put your");
-    lcd.setCursor(1,0);
+    lcd.setCursor(0,1);
     lcd.print("finger in sensor");
    }
    delay(20);
